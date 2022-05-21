@@ -1,0 +1,1 @@
+Nessa semana, **aprendi** a utilizar o terminal e o git.
