@@ -1,4 +1,4 @@
-.bigcard-container {
+/*.bigcard-container {
     display: flex;
     align-items: center;
     border: 1px solid blue;
@@ -6,6 +6,7 @@
     margin-bottom: 10px;
     height: 200px;
 }
+
 
 .bigcard-container > img {
     width: 70px;
@@ -22,3 +23,5 @@
     flex-direction: column;
     justify-items: flex-start;
 }
+
+*/
