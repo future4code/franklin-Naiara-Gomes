@@ -16,7 +16,8 @@ export function SecaoComentario(props) {
 		<CommentContainer>
 			<InputComentario
 				placeholder={'Comentário'}
-				value={''}
+				//Passo 1 - O  value estava vazio, passei a props abaixo, habilitou preenchimento lá no site 
+				value={props.valueInputComentario}
 				onChange={props.onChangeComentario}
 			/>
 			<button onClick={props.aoEnviar}>Enviar</button>
