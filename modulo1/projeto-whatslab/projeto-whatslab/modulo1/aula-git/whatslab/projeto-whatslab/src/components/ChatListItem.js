@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChatListItem.css';
 
-const Chat = ( ) => {
+const ChatListItem = ( ) => {
     return (
         <div className="chatListItem">
         <img className="chatListItem--avatar" src="https://cdn-icons-png.flaticon.com/512/194/194938.png" alt="" />
@@ -20,5 +20,6 @@ const Chat = ( ) => {
         </div>
     );
 }
-export default Chat;
+// eslint-disable-next-line no-undef
+export default ChatListItem;
 
