@@ -8,7 +8,7 @@ const ChatListItem = ( ) => {
         <div className="chatListItem--lines">
         <div className="chatListItem--line">
 
-        <div className="chatListItem--name">Francine </div>
+        <div className="chatListItem--name">Francine</div>
         <div className="chatListItem--date">19:00 </div>
               </div>
               <div className="chatListItem--line">
