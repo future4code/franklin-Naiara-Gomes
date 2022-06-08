@@ -1,7 +1,8 @@
-//import logo from './logo.svg';
 
-const Etapa1 = (props) => {
-  const { irParaProximaEtapa } = props;
+// import styled from 'styled-components'
+
+
+const Etapa1 = ( ) => {
   return (
     <div>
       <h1>ETAPA 1 - DADOS GERAIS</h1>
@@ -27,4 +28,4 @@ const Etapa1 = (props) => {
   );
 };
 
-export default Etapa1;
+export {Etapa1}

@@ -1,5 +1,5 @@
-const Final = (props) => {
-    const {irParaProximaEtapa} = props
+const Final = ( ) => {
+    
     return (
       <div>
        <h1>O FORMULÁRIO ACABOU</h1>
@@ -8,4 +8,4 @@ const Final = (props) => {
     );
   }
   
-  export default Final;
+  export {Final}

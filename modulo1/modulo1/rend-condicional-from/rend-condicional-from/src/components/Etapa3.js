@@ -1,5 +1,5 @@
-const Etapa3 = (props) => {
-    const {irParaProximaEtapa} = props
+const Etapa3 = ( ) => {
+  
     return (
       <div>
        <h1>ETAPA 3 - INFORMAÇÕES GERAIS DE ENSINO</h1>
@@ -24,4 +24,4 @@ const Etapa3 = (props) => {
     );
   }
   
-  export default Etapa3;
+  export {Etapa3}
