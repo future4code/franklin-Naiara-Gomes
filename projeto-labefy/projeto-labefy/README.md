@@ -1,6 +1,8 @@
 # Link do surge
 https://kkkhandsomely-eyes.surge.sh/
 
+https://kkkhandsomely-eyes.surge.sh/
+
 ## Available Scripts
 
 In the project directory, you can run:
