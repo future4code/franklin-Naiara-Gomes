@@ -1,0 +1,22 @@
+.Embarcar-nave{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:block;
+}
+.Embarcar-nave h1 {
+    align-items: center;
+    justify-content: center;
+    font-size:larger;
+}
+.Embarcar-nave select{
+    align-items: center;
+    justify-content: center;
+    font-size:small;
+    flex-direction: column;
+}
+.Embarcar-nave input{
+    align-items: center;
+    justify-content: center;
+    font-size:small;
+}

@@ -1,0 +1,14 @@
+.Login {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: block;
+  }
+  .Login button {
+    padding: 5px;
+    margin: 20px;
+  }
+  .Login h1 {
+    display: flex;
+    margin: 20px;
+  }

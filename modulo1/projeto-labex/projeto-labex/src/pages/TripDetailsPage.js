@@ -1,5 +1,5 @@
 import React from "react";
-function TripDetailsPage() {
+export const TripDetailsPage =()=> {
     return (
       <div>
         <button>Voltar</button><br/>
@@ -11,4 +11,3 @@ function TripDetailsPage() {
       </div>
     );
   }
-  export default TripDetailsPage;

@@ -1,21 +1,8 @@
-import './App.css';
-import HomePage from './pages/HomePage';
-import AdminHomePage from './pages/AdminHomePage';
-import ApplicationFormPage from './pages/ApplicationFormPage';
-import LoginPage from './pages/LoginPage';
-import ListTripsPage from './pages/ListTripsPage';
-import CreateTripPage from './pages/CreateTripPage';
-import TripDetailsPage from './pages/TripDetailsPage';
+import { Router } from './routes/Router';
 function App() {
   return (
     <div className="App">
-      <HomePage />
-      <AdminHomePage />
-      <ApplicationFormPage />
-      <LoginPage />
-      <ListTripsPage />
-      <CreateTripPage />
-      <TripDetailsPage/>
+    <Router/>
     </div>
   );
 }

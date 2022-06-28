@@ -1,16 +1,19 @@
 import React from "react";
-import styledComponents from "styled-components";
-export const Titulo = styledComponents.h1`
-color: red;
-`;
-const AdminHomePage = () => {
+import './AdminHomePage.css';
+import { useNavigate } from "react-router-dom";
+export const AdminHomePage = () => {
+  const navigate = useNavigate()
+  const voltarPagina = () =>{
+    navigate(-1)
+  }
     return (
-      <div>
+      <div className="Autorizados">
         <h1>Painel Administrativo</h1> <br/>
-        <button>Voltar</button>
+        <button onClick={voltarPagina}>Voltar</button>
         <button>Criar Viagem</button>
         <button>Logout</button>
       </div>
     );
   }
-  export default AdminHomePage;
+
+  export default AdminHomePage

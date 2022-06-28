@@ -1,0 +1,37 @@
+.Inscreva-se{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:block;
+    flex-direction: column;
+}
+.Inscreva-se button {
+    border-radius: 7px;
+    display: absolute;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-color: rgb(255, 213, 0);
+    font-family: Arial;
+     margin: 20px 80px;
+    align-items: center;
+    justify-content: center;
+}
+.Inscreva-se select{
+    align-items: center;
+    justify-content: center;
+    font-size:small;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 8px;
+}
+.Inscreva-se input{
+    margin: 2px;
+    border-radius: 8px;
+}
+.Inscreva-se h1{
+    align-items: center;
+    justify-content: center;
+    font-size:larger;
+    margin: 50px;
+}

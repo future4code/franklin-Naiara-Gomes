@@ -1,7 +1,13 @@
 import React from "react";
-function CreateTripPage() {
+import './CreateTripPage.css';
+import { useNavigate } from "react-router-dom";
+export const CreateTripPage = () => {
+    const navigate = useNavigate()
+    const voltarPagina = () =>{
+      navigate(-1)
+    }
     return (
-        <div>
+        <div className="Embarcar-nave">
             <h1>Criar Viagem</h1> <br />
             <form>
                 <input placeholder="Nome" /><br />
@@ -16,9 +22,8 @@ function CreateTripPage() {
                 <input placeholder="Descrição" required="" pattern="^.{30,}$" title="O nome deve ter no mínimo 30 caracteres" value="" /> <br />
                 <input placeholder="Duração em dias" type="number" />
             </form>
-            <button>Voltar</button>
+            <button onClick={voltarPagina}>Voltar</button>
             <button>Criar</button>
         </div>
     );
 }
-export default CreateTripPage;
