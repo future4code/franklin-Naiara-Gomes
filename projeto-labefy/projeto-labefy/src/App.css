@@ -1,0 +1,85 @@
+body {
+  background-color: #081f21;
+  font-family: 'Segoe UI', Helvetica Neue, Helvetica, Lucida Grande, Arial;
+  color: white;
+  overflow-x: hidden;
+  
+}
+
+
+h1 {
+color: white;
+cursor: pointer;
+font-family: 'Segoe UI', Helvetica Neue, Helvetica, Lucida Grande, Arial;
+}
+
+.Container {
+display: flex;
+width: 100%;
+
+justify-content: space-between;
+padding: 20px 10px;
+
+}
+
+*{
+margin:0;
+padding: 0;
+}
+
+
+
+.Itens {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+text-align: left;
+}
+
+.Playlists{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 30px;
+width: 80vw;
+column-gap: 20px;
+}
+
+.Criarformulario input {
+margin-left: 12px;
+}
+
+.Card span {
+display: flex;
+background-color: rgb(205, 64, 64);
+color: white;
+font-size: 13px;
+padding: 0 5px;
+border-radius: 3px;
+justify-content: center;
+align-items: center;
+margin-top: 12px;
+cursor: pointer;
+}
+
+.myButton {
+box-shadow:inset 0px 1px 3px 0px #91b8b3;
+background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+background-color:#768d87;
+border-radius:3px;
+border:1px solid #566963;
+display:inline-block;
+cursor:pointer;
+color:#ede7e7;
+font-family:Arial;
+font-size:10px;
+font-weight:bold;
+padding:5px 11px;
+text-decoration:none;
+text-shadow:0px -1px 0px #2b665e;
+border: none;
+}
+.myButton:hover {
+background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+background-color:#6c7c7c;
+}
