@@ -24,10 +24,14 @@
     flex-direction: column;
     margin: 15px;
     border-radius: 8px;
+    width: 25vw;
+    height: 2vw;
 }
 .Inscreva-se input{
     margin: 2px;
     border-radius: 8px;
+    width: 25vw;
+    height: 2vw;
 }
 .Inscreva-se h1{
     align-items: center;
@@ -35,3 +39,12 @@
     font-size:larger;
     margin: 50px;
 }
+
+
+
+
+
+
+
+
+

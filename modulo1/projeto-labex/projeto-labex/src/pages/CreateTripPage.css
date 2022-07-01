@@ -3,20 +3,34 @@
     align-items: center;
     text-align: center;
     display:block;
+    margin: 60px 0;
 }
 .Embarcar-nave h1 {
     align-items: center;
     justify-content: center;
     font-size:larger;
+    margin: 60px 0;
 }
 .Embarcar-nave select{
     align-items: center;
     justify-content: center;
     font-size:small;
     flex-direction: column;
+    width: 25vw;
+    height: 2vw;
+    margin: 4px 0;
+    border-radius: 7px;
 }
 .Embarcar-nave input{
     align-items: center;
     justify-content: center;
     font-size:small;
+    width: 25vw;
+    height: 2vw;
+    border-radius: 7px;
+    margin: 4px 0;
 }
+
+
+
+

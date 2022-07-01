@@ -1,32 +1,35 @@
 body {
+
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  text-align: center;
   align-items: center;
-  display: flex;
   justify-content: center;
-  background-image: url('https://www.irmaos.com/wp-content/uploads/2019/12/pod392-1.jpg');
+  background-image: url('https://images.tcdn.com.br/img/img_prod/1057913/estampa_ceu_estrelada_553_1_4b4b47d91a07686d0e156676efaaef95.jpg');
 }
 h1 {
   color: rgb(255, 213, 0);
   align-items: center;
-  justify-content: center;
   text-align: center;
   display: inline;
   justify-content: center;
-  margin: 500px;
+  margin: 20px;
   margin-top: 10px;
+  font-size: 50px;
 }
 button {
   border-radius: 7px;
-  display: absolute;
   background-color: white;
   color: black;
   cursor: pointer;
   border-color: rgb(255, 213, 0);
   font-family: Arial;
   margin: 20px 20px;
+
+  display: inline;
   align-items: center;
-  justify-content:  space-between;
+  justify-content:  center;
   text-align: center;
+ font-size: 17px;
 }

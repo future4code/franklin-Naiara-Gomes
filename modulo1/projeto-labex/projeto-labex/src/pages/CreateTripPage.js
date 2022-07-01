@@ -3,6 +3,7 @@ import './CreateTripPage.css';
 import { useNavigate } from "react-router-dom";
 export const CreateTripPage = () => {
     const navigate = useNavigate()
+    
     const voltarPagina = () =>{
       navigate(-1)
     }
