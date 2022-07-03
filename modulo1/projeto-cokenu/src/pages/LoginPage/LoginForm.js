@@ -13,7 +13,7 @@ const LoginForm = ({setRightButtonText}) => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    login(form, clear, navigate)
+    login(form, clear, navigate, setRightButtonText)
   };
 
  

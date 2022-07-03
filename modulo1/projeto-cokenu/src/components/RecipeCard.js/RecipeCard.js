@@ -4,6 +4,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { RecipeCardContainer, RecipeCardContent } from './styled'
 
+
 const RecipeCard = (props) => {
 
   return (
