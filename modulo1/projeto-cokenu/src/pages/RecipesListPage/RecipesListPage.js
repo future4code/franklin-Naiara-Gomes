@@ -1,16 +1,16 @@
 import React from "react";
-// import Button from "@material-ui/core/Button"
-const RecipesListPage = () => {
-    return (
-      <div>
-        <h1>RecipesListPage</h1>
-        {/* <Button variant="contained" color="primary">
-        Clique Aqui
-        </Button> */}
+//import RecipeCard from "../../components/RecipeCard/RecipeCard"
+import useProtectedPage from "../../hooks/useProtectedPage";
 
-      </div>
-    );
-  };
-  
-  export default RecipesListPage;
-  
+const RecipesListPage = () => {
+  useProtectedPage()
+  return (
+    <div>
+      <h1>RecipeDetailPage</h1>
+      
+    </div>
+  );
+};
+
+
+export default RecipesListPage

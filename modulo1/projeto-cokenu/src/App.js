@@ -1,14 +1,21 @@
-import React from "react"
+import React, {useState} from "react"
 import Router from './routes/Router';
 import theme from "./constants/theme";
 import { ThemeProvider } from "@material-ui/core/styles";
+import Header from "./components/Header/Header";
+import { BrowserRouter } from "react-router-dom";
 
 
-function App() {
+const App = () => {
+  const token = localStorage.getItem("token")
+  // Criado um estado e um Ternario para mudança de botão
+  const [rightButtonText, setRightButtonText] = useState(token ?"Logout" : "Login" )
   return (
     <ThemeProvider theme={theme}>
-      <Router/>
-
+       <BrowserRouter>
+      <Header rightButtonText={rightButtonText} setRightButtonText={setRightButtonText}/>
+      <Router setRightButtonText={setRightButtonText}/>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

@@ -8,8 +8,30 @@ import {goToRecipesList,goToLogin} from "../../routes/coordinator"
 import { useNavigate } from "react-router-dom"
 
 
-const Header = () => {
-    const navigate = useNavigate
+const Header = ({rightButtonText, setRightButtonText}) => {
+  //Pega o token. E no ternario diz que se ele existir é uma coisa, se não, é outra Logout e Login 
+    const token = localStorage.getItem("token")
+    const navigate = useNavigate()
+    
+
+   const logout = () => {
+     localStorage.removeItem("token")
+   }
+
+
+    const rightButtonAction = () => {
+       if (token){
+         logout()
+         setRightButtonText("Login")
+         goToLogin(navigate)
+       } else {
+        goToLogin(navigate)
+       }
+    }
+
+
+
+
   return (
    
       <AppBar position="static">
@@ -24,7 +46,7 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <Button onClick={() => goToRecipesList(navigate)} color="inherit">Cokenu</Button>
-          <Button onClick={goToLogin} color="inherit">Login</Button>
+          <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
         </StyledToolbar>
       </AppBar>
    
