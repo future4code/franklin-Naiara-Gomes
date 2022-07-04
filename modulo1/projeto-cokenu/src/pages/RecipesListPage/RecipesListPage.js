@@ -13,12 +13,14 @@ const RecipesListPage = () => {
  const recipeCards = recipes.map((recipe)=>{
 
   return (
+    <div>
     <RecipeCard 
       
-       title={"Batata"}
+        title={"Batata"}
         image={"https://cdn-icons-png.flaticon.com/512/1868/1868619.png"}
         onClick={()=> null}
       />
+      </div>
   )
  })
 

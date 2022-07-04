@@ -9,7 +9,8 @@ import { goToLogin } from '../routes/coordinator'
 
 const useProtectedPage = () => {
     const navigate = useNavigate()
-  useLayoutEffect(() => {
+    useLayoutEffect(() => {
+    
     const token = localStorage.getItem('token')
     if (!token){
       goToLogin(navigate)
