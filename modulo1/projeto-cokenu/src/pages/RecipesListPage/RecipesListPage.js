@@ -8,19 +8,18 @@ import useRequestData from "../../hooks/useRequestData";
 const RecipesListPage = () => {
   useProtectedPage()
   const recipes = useRequestData([],`${BASE_URL}/recipe/feed`)
- 
+  console.log(recipes)
 
  const recipeCards = recipes.map((recipe)=>{
-
+  
   return (
-    <div>
+    
     <RecipeCard 
-      
-        title={"Batata"}
-        image={"https://cdn-icons-png.flaticon.com/512/1868/1868619.png"}
+        title={"title"}
+        image={recipe.image}
         onClick={()=> null}
       />
-      </div>
+      
   )
  })
 

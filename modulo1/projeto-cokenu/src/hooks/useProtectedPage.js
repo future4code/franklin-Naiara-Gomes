@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useLayoutEffect } from 'react'
+import {  useLayoutEffect, useEffect } from 'react'
 import { goToLogin } from '../routes/coordinator'
 
 //useprotect page serve para deixar a pessoa só entrar naquela aba se ela fez login e tem permissao
@@ -10,7 +10,7 @@ import { goToLogin } from '../routes/coordinator'
 const useProtectedPage = () => {
     const navigate = useNavigate()
     useLayoutEffect(() => {
-    
+     // useEffect(() => {
     const token = localStorage.getItem('token')
     if (!token){
       goToLogin(navigate)
