@@ -6,7 +6,7 @@ import useProtectedPage from "../../hooks/useProtectedPage";
 import useRequestData from "../../hooks/useRequestData";
 import { RecipeListContainer, AddRecipeButton } from "./styled";
 import {Add} from '@material-ui/icons'
-import { goToAddRecipes } from "../../routes/coordinator";
+import { goToAddRecipes, goToRecipeDetail } from "../../routes/coordinator";
 import { useNavigate } from "react-router-dom";
 //import { goToAddRecipes } from "../../routes/coordinator";
 
@@ -15,6 +15,12 @@ const RecipesListPage = () => {
   const navigate = useNavigate()
   const recipes = useRequestData([],`${BASE_URL}/recipe/feed`)
   
+
+  const onClickCard = (id) =>{
+    goToRecipeDetail(navigate, id)
+  }
+
+
 
  const recipeCards = recipes.map((recipe)=>{
    //return (<p>{recipe.title}</p>)
@@ -25,7 +31,7 @@ const RecipesListPage = () => {
         key={recipe.recipe_id}
         title={"recipe.title"}
         image={recipe.image}
-        onClick={()=> null}
+        onClick={()=> onClickCard(recipe.recipe_id)}
       />
       
   )
