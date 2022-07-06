@@ -1,12 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { InputsContainer, AddRecipeFormContainer } from './styled'
 import useForm from '../../hooks/useForm'
 import { useNavigate } from 'react-router-dom'
+import {createRecipe} from "../../services/recipe"
+import { useState } from 'react'
 import axios from "axios"
-import { BASE_URL } from '../../constants/urls'
-//import {createRecipe} from "../../services/recipe"
+import { BASE_URL } from "../../constants/urls"
 //import CircularProgress from '@material-ui/core/CircularProgress'
 
 const AddRecipeForm = () => {
@@ -14,25 +15,23 @@ const AddRecipeForm = () => {
   const [form, onChange, clear] = useForm({ title: "", description: "", image: "" })
   //const [isLoading, setIsLoading] = useState(false)
 
-  const createRecipe = () => {
-      axios.post(`${BASE_URL}/recipe`, form, {
-        headers: {
-          Authorization: localStorage.getItem("token")
-        }
-      })
-      .then((res) => {
-        alert(res.data.message)
-        clear()
-      })
-      .catch((err) => {
-        alert(err.response.message)
+  const createRecipe = (body, clear) => {
+    axios.post(`${BASE_URL}/recipe`, body, {
+      headers: {
+        Authorization: localStorage.getItem("token")
+      }
     })
-    }
-
+    .then((res) => {
+      alert(res.data.message)
+      clear()
+    })
+    .catch((err) => {
+      alert(err.response.message)
+  })
+  }
   const onSubmitForm = (event) => {
     event.preventDefault()
-    createRecipe()
-    //createRecipe(form, clear, setIsLoading)
+    createRecipe(form, clear)
   }
 
   return (
