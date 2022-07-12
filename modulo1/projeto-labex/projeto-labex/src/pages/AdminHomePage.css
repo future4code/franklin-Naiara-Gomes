@@ -1,0 +1,13 @@
+.Autorizados{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:block;
+    color: aliceblue;
+}
+.Autorizados h1{
+    align-items: center;
+    justify-content: center;
+    font-size:larger;
+    margin: 50px;
+}

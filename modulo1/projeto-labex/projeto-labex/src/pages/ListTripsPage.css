@@ -1,0 +1,9 @@
+Trip{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display:block;
+}
+.Trip h1{
+    font-size:larger;
+}

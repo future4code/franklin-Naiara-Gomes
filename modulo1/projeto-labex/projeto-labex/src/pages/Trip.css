@@ -1,0 +1,17 @@
+.Trip{
+    background-image: url('https://static6.depositphotos.com/1151061/650/v/600/depositphotos_6504973-stock-illustration-starry-sky.jpg');
+    color: aliceblue;
+}
+.Viagem{
+    -webkit-box-shadow: -10px 7px 15px 0px #FFF;
+box-shadow: -10px 7px 15px 0px #FFF;
+   width: 50vw;
+   align-items: center;
+   text-align:justify;
+   margin: 20px 0 ;
+}
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
