@@ -1,10 +1,4 @@
-import { task } from "./task.js";
+import { exercicio1 } from "./exercicio1.js";
+import { exercicio2 } from "./exercicio1.js";
+import { exercicio3 } from "./exercicio1.js";
 
-const valor = Number;
-const value = process.argv[2];
-
-const tarefa = task.filter((dados) => {
-  return "Olá,", value, dados.name, "!Você tem", valor," ", "anos.";
-});
-
-console.log(tarefa);
