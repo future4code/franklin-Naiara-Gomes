@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model docente {
+  id        String   @id @db.VarChar(255)
+  nome      String   @unique(map: "nome") @db.VarChar(255)
+  email     String   @unique(map: "email") @db.VarChar(255)
+  data_nasc DateTime @db.Date
+}
+
+model especialidade {
+  id   String @id @db.VarChar(255)
+  nome String @unique(map: "nome") @db.VarChar(255)
+}
+
+model estudante {
+  id              String            @id @db.VarChar(255)
+  nome            String            @unique(map: "nome") @db.VarChar(255)
+  email           String            @unique(map: "email") @db.VarChar(255)
+  data_nasc       DateTime          @db.Date
+  estudante_hobby estudante_hobby[]
+}
+
+model estudante_hobby {
+  id           String    @id @db.VarChar(255)
+  estudante_id String    @db.VarChar(255)
+  hobby_id     String    @db.VarChar(255)
+  estudante    estudante @relation(fields: [estudante_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "estudante_hobby_ibfk_1")
+  hobby        hobby     @relation(fields: [hobby_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "estudante_hobby_ibfk_2")
+
+  @@index([estudante_id], map: "estudante_id")
+  @@index([hobby_id], map: "hobby_id")
+}
+
+model hobby {
+  id              String            @id @db.VarChar(255)
+  nome            String            @unique(map: "nome") @db.VarChar(255)
+  estudante_hobby estudante_hobby[]
+}
+
+model professores_labenu {
+  id    Int    @id
+  nome  String @db.VarChar(255)
+  email String @unique(map: "email") @db.VarChar(255)
+  idade Int?
+}
+
+model turma {
+  id     String    @id @db.VarChar(255)
+  nome   String    @db.VarChar(255)
+  modulo String?   @default("0") @db.VarChar(255)
+  inicio DateTime? @db.Date
+  fim    DateTime? @db.Date
+}
+
+model usuario {
+  id       BigInt  @id @unique(map: "id") @default(autoincrement()) @db.UnsignedBigInt
+  nome     String? @db.VarChar(255)
+  email    String? @db.VarChar(255)
+  nickname String? @db.VarChar(255)
+}
+
+model receita_cokenu {
+  id          Int            @id @default(autoincrement())
+  title       String         @db.VarChar(255)
+  description String         @db.VarChar(255)
+  image       String
+  created_by  Int
+  owner       usuario_cokenu @relation(fields: [created_by], references: [id])
+  created_at  DateTime       @default(now())
+  updated_at  DateTime       @updatedAt
+}
+
+model usuario_cokenu {
+  id         Int              @id @default(autoincrement())
+  email      String           @db.VarChar(255)
+  password   String           @db.VarChar(255)
+  name       String           @db.VarChar(255)
+  created_at DateTime         @default(now())
+  updated_at DateTime         @updatedAt
+  recipes    receita_cokenu[]
+}
